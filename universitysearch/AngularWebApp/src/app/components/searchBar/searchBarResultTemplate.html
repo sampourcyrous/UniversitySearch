@@ -1,0 +1,44 @@
+<div id="searchResultTemplate.html">
+    <div style="cursor:not-allowed" colspan="4" data-ng-if="match.model.course_divider">
+      <div class="courses_header" >
+        <em>Courses</em>
+      </div>
+    </div>
+
+    <div class="course_result_container" data-ng-if="match.model.courseCode">
+      <div class="course_code">
+        <div>
+          <a data-ng-bind-html="match.model.courseCode"></a>
+        </div>
+      </div>
+      <div class="course_name">
+        <div>
+          <a>{{ match.model.courseName }}</a><br>
+        </div>
+      </div>
+    </div>
+
+    <div style="cursor:not-allowed" data-ng-if="match.model.file_divider">
+      <div class="files_header">
+        <em>Files</em>
+      </div>
+    </div>
+
+    <div class="file_result_container" data-ng-if="match.model.filePath">
+      <div class="file_name">
+        <div>
+          <a>{{ match.model.fileName.substring(match.model.fileName.indexOf('-')+1) }}</a>
+        </div>
+      </div>
+      <div class="file_desc">
+        <div>
+          <a>{{ match.model.fileDesc }}</a>
+        </div>
+      </div>
+      <div class="file_blurb">
+        <div>
+          <p style="font-size: medium;" data-ng-bind-html="match.model.blurb"></p>
+        </div>
+      </div>
+    </div>
+</div>

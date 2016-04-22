@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"><hibernate-mapping>
+    <class name="universitysearch.Course" table="courses">
+        <meta attribute="class-description">
+            This class contains the employee detail.
+        </meta>
+        <id name="id" type="int" column="course_id">
+            <generator class="identity" />
+        </id>
+        <properties name="NAME_UNIQUE" unique="true">
+            <property name="courseName" column="name" type="string" />
+        </properties>
+        <property name="courseDesc" column="description" type="string" />
+        <properties name="COURSE_UNIQUE" unique="true">
+        	<property name="courseCode" column="course_code" type="string" />
+        </properties>
+        <property name="profID" column="professor_id" type="int" />
+    </class>
+</hibernate-mapping>

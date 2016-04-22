@@ -1,0 +1,11 @@
+<div class="search_parent"  data-placeholder="{{sbc.showNoResults(noResults)}}">
+  <i style="position: absolute; top: 10px; margin-left:-30px; float:right;" data-ng-show="loadingSearch"
+     class="glyphicon glyphicon-refresh"></i>
+
+  <input class="search_bar form-control" type="text" data-ng-model="sbc.selectedTerm"
+         placeholder="Search for course or file/contents"
+         data-typeahead-template-url="app/components/searchBar/searchBarResultTemplate.html"
+         data-uib-typeahead="selectedTerm for selectedTerm in sbc.search($viewValue)"
+         data-typeahead-loading="loadingSearch" data-typeahead-no-results="noResults"
+         typeahead-on-select="sbc.onSelect($item, $model, $label)">
+</div>

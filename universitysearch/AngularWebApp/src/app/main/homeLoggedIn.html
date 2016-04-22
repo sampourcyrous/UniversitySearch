@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University Search: Home</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway|Lato|Droid+Sans|Roboto+Slab">
+</head>
+<body>
+
+<div class="container" id="wrapper">
+
+
+  <div>
+    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+  </div>
+
+
+
+
+
+  <div class="jumbotron text-center" ng-init="">
+
+    <p>
+
+
+
+
+
+    </p>
+
+    <div>
+      <acme-navbar creation-date="home.creationDate"></acme-navbar>
+    </div>
+    <side-navbar first-name="home.user_info"></side-navbar>
+
+    <h1 style="font-family: 'Roboto Slab';">Welcome {{home.user_info}}</h1>
+
+    <p class="lead" style="font-family: 'Lato';">
+    <p></p>
+    <p>Hey!</p>
+    </p>
+
+    <p> <!-- class="animated infinite" ng-class="main.classAnimation">-->
+      <!--rather than ng-click="main.showToastr()"-->
+      <button type="button" class="btn btn-lg btn-success" ng-click="home.logout()" ng-keydown="$event.which === 13 && home.logout()" style="font-family: 'Droid Sans';">Logout</button>
+    </p>
+  </div>
+
+
+
+
+</div>
+
+</body>
+</html>

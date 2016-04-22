@@ -1,0 +1,25 @@
+<div id="file_dialog">
+  <div>
+    <iframe ng-src="{{trustSrc(params.filePath)}}"></iframe>
+  </div>
+  <div id="modal_sidebar" style="font-family: 'Droid Sans';">
+
+    <div class="tags_container">
+      <span class="tag_file">Enter new tags for this file:</span><br>
+      <tags-input ng-model="tags" max-length="24" add-on-space="true"></tags-input>
+      <button type="button" class="btn btn-sm btn-info" data-ng-click="submitTags()">Update Tags</button><br>
+    </div>
+
+    <span class="course_code">File Name: <em>{{params.fileName.substring(params.fileName.indexOf('-')+1)}}</em></span><br>
+    <div class="course_mod_container">
+      <button class="btn btn-sm btn-danger" data-ng-show="isProf" type="button btn btn-primary" data-ng-click="deleteFile()">Delete File</button>
+      <button class="btn btn-sm btn-info" data-ng-disabled="approved" data-ng-show="isProf" type="button btn btn-primary" data-ng-click="approveFile()">{{approvedText}}</button>
+    </div>
+
+    <div class="feedback_container">
+      <uib-alert data-ng-show="tagSuccess" style="background-color:#D8EECC; color:#90884F">Tags Recorded Successfully!</uib-alert>
+      <uib-alert data-ng-show="showApprovalError" style="background-color:#EED6D6;color:#963148">You are not authorized to approve this file!</uib-alert>
+    </div>
+
+  </div>
+</div>

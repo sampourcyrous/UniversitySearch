@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up Today</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway|Lato|Droid+Sans|Roboto+Slab">
+</head>
+<body>
+
+<div class="container" id="wrapper">
+
+  <div>
+    <acme-navbar></acme-navbar>
+  </div>
+  <side-navbar></side-navbar>
+  <div class="jumbotron text-center" ng-init="">
+    <p>
+
+
+
+    </p>
+    <search-bar></search-bar>
+    <h2 style="font-family: 'Roboto Slab';">Manage Your Course Files Here</h2><br>
+
+    <h4 style="font-family: 'Lato';">Files Submitted
+    </h4>
+
+    <select name="singleSelect" id="singleSelect" ng-model="manage.singleSelect">
+      <option value="">Year</option> <!-- not selected / blank option -->
+      <option value="{{data.option1}}">2016</option> <!-- interpolation -->
+      <option value="option-2">2015</option>
+    </select>
+    <br>
+    <br>
+
+    <div class="row">
+      <!--<div class="gridStyle" ui-grid="manage.gridOptions" ui-grid-edit></div>-->
+      <div ui-grid="{ data: manage.hardFiles }" class="myGrid"></div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+</body>
+</html>

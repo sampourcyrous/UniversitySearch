@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"><hibernate-mapping>
+    <class name="universitysearch.File" table="files">
+        <meta attribute="class-description">
+            This class contains the employee detail.
+        </meta>
+        <id name="id" type="int" column="file_id">
+            <generator class="identity" />
+        </id>
+        <property name="fileName" column="name" type="string" />
+        <property name="filePath" column="path" type="string" />
+        <property name="fileSize" column="size" type="long" />
+        <property name="fileDesc" column="description" type="string" />
+        <properties name="NAME_UNIQUE" unique="true">
+        	<property name="fileHash" column="hash" type="string" />
+        </properties>
+        <property name="fileOwner" column="owner_id" type="int" />
+        <properties name="HASH_UNIQUE" unique="true">
+        	<property name="timeHash" column="hash_timestamp" type="string" />
+        </properties>
+        <property name="courseId" column="course_id" type="int" />
+        <property name="isApprov" column="is_appro" type="int" />
+    </class>
+</hibernate-mapping>

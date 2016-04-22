@@ -1,0 +1,44 @@
+.gridViewContainer {
+  .files_title, .courses_title {
+    font-family: 'Roboto Slab';
+    margin-bottom: 20px;
+  }
+  .files, .courses {
+    display: inline-block;
+    .file, .course {
+      float: left;
+      display: block;
+      width: 150px;
+      margin-right: 20px;
+
+      .file_icon_container {
+        display: inline-block;
+
+        .approved_icon {
+          float: left;
+          .course_icon {
+            position: relative;
+            right: 70px;
+            top: 40px;
+          }
+        }
+        .file_icon {
+          float: left;
+
+        }
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      .file_name, .course_code {
+        text-overflow: ellipsis;
+        width: 150px;
+        height: 40px;
+        white-space: nowrap;
+        overflow: auto;
+      }
+    }
+  }
+}

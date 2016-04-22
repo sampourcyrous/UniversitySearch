@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Today</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway|Lato|Droid+Sans|Roboto+Slab">
+</head>
+<body id="boldback">
+
+<div class="container">
+  <div class="jumbotron text-center" ng-init="">
+    <h1 style="font-family: 'Roboto Slab';">Register Today</h1>
+
+    <p class="lead" style="font-family: 'Lato';">
+      <p></p>
+      <p>Free for all University of Toronto Students.</p>
+    </p>
+
+    <ng-form ng-hide="hideForm" name="signUp" style="font-family: 'Lato';" novalidate>
+
+      <div style="display: inline-block; " class="form_container">
+
+        <div style="float:left; line-height: 1.5;" class="label_container">
+          <p><label>First Name:</label></p>
+          <p><label>Last Name:</label></p>
+          <p><label>UTORID:</label></p>
+          <p><label>Student Number:</label></p>
+          <p><label>U of T Email:</label></p>
+          <p><label>Password:</label></p>
+          <p><label>Confirm Password:</label></p>
+        </div>
+
+        <div style="float:left; margin-left: 15px;" class="field_container">
+          <p><input type="text" name="firstName" ng-model="user.firstName" required></p>
+          <p><input type="text" name="lastName" ng-model="user.lastName" required></p>
+          <p><input type="text" name="utorid" ng-model="user.utorid" required></p>
+          <p><input type="text" name="studentNumber" ng-model="user.studentNumber" required ng-pattern="/\d+/"></p>
+          <!--
+          <p><label> U of T Email: </label><input type="text" name="user.email" ng-model="email" ng-pattern="^[A-Z0-9._%+-]" required> <label>@mail.utoronto.ca</label></p>
+          -->
+          <p><input type="text" name="email" ng-model="user.email" required ng-pattern="/@(mail[.])?utoronto[.]{1}ca$/"></p>
+          <p><input type="password" name="password" ng-model="user.password" required></p>
+          <p><input type="password" name="password2" ng-model="password2" ui-validate="'$value==user.password'" ui-validate-watch="'user.password'" required></p>
+        </div>
+      </div>
+
+
+      <p class="animated infinite" ng-class="main.classAnimation">
+        <button type="submit" class="btn btn-lg btn-success" style="font-family: 'Droid Sans';" ng-disabled=!signUp.$valid ng-click=add(user)>Verify</button>
+      </p>
+
+      <span ng-show="user.password != password2">Passwords do not match.</span>
+    </ng-form>
+
+    <p>{{registerResponse}}</p>
+
+
+  </div>
+
+
+</div>
+</body>
+</html>

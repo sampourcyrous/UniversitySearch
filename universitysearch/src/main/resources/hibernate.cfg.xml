@@ -1,0 +1,26 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+    <session-factory>
+        <!-- hibernate dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <!-- Automatic schema creation (begin) === -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!-- Simple memory-only cache -->
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+        <!-- ############################################ -->
+        <!-- # mapping files with external dependencies # -->
+        <!-- ############################################ -->
+        <mapping resource="User.hbm.xml" />
+        <mapping resource="File.hbm.xml" />
+        <mapping resource="Course.hbm.xml" />
+        <mapping resource="FileCourse.hbm.xml" />
+        <mapping resource="Tags.hbm.xml" />
+		<mapping resource="UserCourse.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

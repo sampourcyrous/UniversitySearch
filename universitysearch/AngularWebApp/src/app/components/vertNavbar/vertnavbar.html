@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!--<div id="sidebar-wrapper">-->
+  <div class="navbar-header container-fluid">
+    <button type="button" id="sideBarButton" class="navbar-toggle" data-toggle="collapse" ng-click="sideBarCollapsed = !sideBarCollapsed" data-target="sidenav">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+  </div>
+  <div class="collapse navbar-collapse" id="sidenav" uib-collapse="sideBarCollapsed" >
+  <ul class="sidebar-nav" style="font-family: 'Droid Sans';">
+
+    <li id="user_notifications_bar">
+      <img src="https://cdn4.iconfinder.com/data/icons/twitter-ui-set/128/Mail-32.png" />
+      {{side.user_info}}
+      <notification-icon data-ng-show="side.notificationsNum > 0" data-ng-click="side.redirectToNotifications()" id="custom-style"
+                         count = "side.notificationsNum" clear-trigger="click" animation="bounce" >
+         <span class="glyphicon glyphicon-bell">
+
+      </notification-icon>
+    </li>
+
+    <li>
+      <a ng-href="#/" ng-click="side.logout()">Logout</a>
+    </li>
+    <li>
+      <a ng-href="#advancedSearch">Advanced Search</a>
+    </li>
+
+    <li ng-if="side.isProf">
+      <a ng-href="#addDeleteCourse">Add/Remove a Course</a>
+    </li>
+    <li id="add_remove_button" >
+      <file-upload></file-upload>
+    </li>
+
+  </ul>
+  </div>
+<!--</div>-->

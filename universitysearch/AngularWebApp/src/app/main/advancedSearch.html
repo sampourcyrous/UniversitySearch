@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Today</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway|Lato|Droid+Sans|Roboto+Slab">
+</head>
+<body>
+
+<div class="container" id="wrapper" ng-init="">
+
+    <div>
+        <acme-navbar creation-date="reg.creationDate"></acme-navbar>
+    </div>
+
+
+  <side-navbar></side-navbar>
+    <div class="jumbotron text-center">
+
+      <br>
+      <br>
+        <h1 style="font-family: 'Roboto Slab';">Advanced Search</h1><br>
+    </div>
+
+    <div class="search_body" style="font-family: 'Lato';">
+        <h4>Find documents or courses with...</h4><br>
+
+        <div class="search_field_container">
+            <div class="search_field">
+                <label class="label1">All these words:</label>
+                <input class="advanced_search_input" uib-popover="Type all important words" popover-placement="right" popover-trigger="focus" type="text" data-ng-model="asc.all">
+            </div>
+            <div class="search_field">
+                <label  class="label2">These exact words or phrases: </label>
+                <input class="advanced_search_input" uib-popover='Put exact words in quotes: "software engineering"' popover-placement="right"  type="text" popover-trigger="focus" data-ng-model="asc.exact">
+            </div>
+            <div class="search_field">
+                <label  class="label3">Any of these words: </label>
+                <input type="text" class="advanced_search_input"
+                       uib-popover="Separate all relevant terms with OR: engineering OR sociology" popover-placement="right"
+                       popover-trigger="focus" data-ng-model="asc.any">
+            </div>
+            <div class="search_field">
+                <label  class="label4">None of these words:</label>
+                <input type="text" class="advanced_search_input"
+                       uib-popover="Put a hyphen just before each word not to be included in the search: -cat"
+                       popover-placement="right"
+                       popover-trigger="focus" data-ng-model="asc.none">
+            </div>
+        </div>
+    </div>
+
+    <div class="search_button_container" style = "font-family: 'Droid Sans';">
+        <button class="search btn btn-lg btn-success" data-ng-click="asc.advancedSearch()">Search</button><br>
+    </div>
+
+    <div class="search_results_container" style="font-family: 'Lato';">
+        <span class="lead">Search Results</span>
+
+        <div class="search_results">
+            <grid-view files="asc.files" courses="asc.courses"></grid-view>
+        </div>
+    </div>
+
+</body>
+</html>

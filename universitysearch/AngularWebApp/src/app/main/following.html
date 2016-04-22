@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome!</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway|Lato|Droid+Sans|Roboto+Slab">
+</head>
+<body>
+
+
+
+<acme-navbar style="float:left;" creation-date="reg.creationDate"></acme-navbar>
+
+    <div id="wrapper" class="main_container">
+        <side-navbar style="float:left" first-name="home.user_info"></side-navbar>
+        <div class="container" style="display: inline-block">
+            <div class="jumbotron text-center" ng-init="">
+                <h2 style="font-family: 'Roboto Slab';">Courses being followed</h2><br>
+            </div>
+
+            <table style="float: left;" class="following_container table table-hover table-striped">
+                <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Course Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr data-ng-repeat="course in fc.courses" data-ng-click="fc.loadCourse(course)">
+                    <th scope="row">{{course.courseCode}}</th>
+                    <td>{{course.courseName}}</td>
+                    <td>{{course.courseDesc}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

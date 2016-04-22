@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome!</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway|Lato|Droid+Sans|Roboto+Slab">
+</head>
+<body>
+
+
+
+<acme-navbar style="float:left;" creation-date="reg.creationDate"></acme-navbar>
+
+<div id="wrapper" class="main_container">
+    <side-navbar style="float:left" first-name="home.user_info"></side-navbar>
+    <div class="container" style="display: inline-block">
+        <div class="jumbotron text-center" ng-init="">
+            <h2 style="font-family: 'Roboto Slab';">New files of interest to you</h2><br>
+        </div>
+
+        <grid-view files="nc.filesUploaded"></grid-view>
+    </div>
+</div>
+
+
+
+</body>
+</html>

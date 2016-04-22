@@ -1,0 +1,49 @@
+<div class="file_upload_container" ng-controller="FileUploadController as vm">
+    <div class="course">
+        <label class="course_label">Type a course code to upload the document to: </label>
+        <input type="text" ng-model="vm.selectedCourse" typeahead-editable='false'
+               uib-typeahead="course as course.courseCode for course in vm.courses | filter:$viewValue| limitTo:8"
+               typeahead-template-url="customTemplate.html" class="form-control"  >
+    </div>
+
+    <div class="tags">
+        <label>Enter tags to attach to the document: </label>
+        <tags-input ng-model="vm.tags" max-length="24" add-on-space="true"></tags-input>
+    </div>
+
+    <div class="course_desc">
+        <label>Enter a description for the document: </label>
+        <input class="form-control" ng-model="vm.courseDesc" max-length="128">
+    </div>
+
+    <div class="upload_file_area">
+        <div class="upload_file_button">
+            <div ng-disabled="vm.selectedCourse == null" class="btn btn-primary"
+                 ngf-select="vm.upload($files)" ngf-multiple="true" ngf-accept="'application/pdf, .txt, .html'" >Select File</div>
+        </div>
+
+        <div class="or_text">
+            <span>OR</span>
+        </div>
+
+        <div class="upload_file_drag_drop">
+            <div ng-disabled="vm.selectedCourse == null" ngf-drop="vm.upload($files)" ngf-select="vm.upload($files)" ng-model="files" class="drop-box"
+                 ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"
+                 accept="'application/pdf, .txt, .html'">Drop pdfs/.txt/.html here or click to upload
+            </div>
+            <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
+            <ul>
+                <li ng-repeat="f in files" style="font:smaller">{{f.name}} {{f.$error}} {{f.$errorParam}}</li>
+            </ul>
+        </div>
+        <uib-alert data-ng-show="vm.fileUploadSuccess" style="background-color:#D8EECC; color:#90884F">Upload Success!</uib-alert>
+        <uib-alert data-ng-show="vm.fileUploadError" style="background-color:#EED6D6;color:#963148">File Upload Error! -- Unsuccessful -- </uib-alert>
+    </div>
+
+</div>
+
+<script type="text/ng-template" id="customTemplate.html">
+    <a>
+        <span class="courses_dropdown">{{match.model.courseCode}} -- {{match.model.courseName}}</span>
+    </a>
+</script>

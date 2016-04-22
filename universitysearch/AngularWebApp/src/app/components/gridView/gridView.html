@@ -1,0 +1,44 @@
+<div class="gridViewContainer">
+    <div data-ng-show="gvc.files.length > 0" class="files_title"><h3><span>Files</span></h3></div>
+
+    <table data-ng-show="gvc.files.length > 0" style="float: left;" class="table table-hover table-striped">
+        <thead>
+        <tr>
+            <th>File Name</th>
+            <th>File Description</th>
+            <th>Course</th>
+            <th>Approved</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-ng-repeat="file in gvc.files" >
+            <th scope="row"><a style="cursor: pointer;" data-ng-click="gvc.openFileModal(file)">{{file.fileName.substring(file.fileName.indexOf('-')+1)}}</a></th>
+            <td>{{file.fileDesc}}</td>
+            <th><a ng-href = "#course/{{file.courseId}}">{{gvc.getCourseCode(file.courseId)}}</a></th>
+            <th>{{file.isApprov ? 'Y' : 'N' }}</th>
+        </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+
+    <div data-ng-show="gvc.courses.length > 0" class="courses_title"><h3><span>Courses</span></h3></div>
+    <table  data-ng-show="gvc.courses.length > 0" style="float: left; cursor: pointer;" class="table table-hover table-striped">
+        <thead>
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Course Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-ng-click="gvc.routeToCoursePage(course.id)"  data-ng-repeat="course in gvc.courses">
+            <th scope="row"><a data-ng-href="#course/{{course.id}}">{{course.courseCode}}</a></th>
+            <td><a data-ng-href="#course/{{course.id}}">{{course.courseName}}</a></td>
+            <td><em>{{course.courseDesc}}</em></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+

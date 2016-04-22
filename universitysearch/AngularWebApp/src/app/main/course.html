@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Today</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway|Lato|Droid+Sans|Roboto+Slab">
+</head>
+    <body>
+    <div class="container" id="wrapper">
+        <div>
+            <acme-navbar></acme-navbar>
+        </div>
+
+        <side-navbar></side-navbar>
+        <div class="container">
+            <div class="jumbotron text-center" >
+                <h2 style="font-family: 'Roboto Slab';">Course Page for {{cc.course.courseCode}} </h2><br>
+            </div>
+
+            <div class="follow_unfollow" style = "font-family: 'Droid Sans';">
+                <button data-ng-click="cc.toggleFollowing()"
+                        class="followButton" data-ng-class="cc.following ? 'following' : ''" ng-mouseenter="hover = true"
+                        ng-mouseleave="hover = false">{{cc.followText}}</button>
+            </div>
+            <grid-view files="cc.files"></grid-view>
+        </div>
+    </div>
+
+
+    </body>
+</html>

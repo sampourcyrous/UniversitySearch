@@ -1,0 +1,56 @@
+As Jim Rudebacher, I would like to be able to create an account and sign in so that my home page can be customized with my own courses
+	- 4 days
+	- Priority: High
+
+As Jim Rudebacher, I would like to be able to delete documents added by students so that I can control and prevent the uploading of duplicate or protected documents.
+	- 2 days
+	- Priority: High
+
+As Kelly Hoskins, I would like the ability to search across multiple dimensions so that I don’t have to think about the course/document structure in my head to traverse the site. 
+	- 12 days
+	- Priority: High
+
+As Kelly Hoskins, I would like the ability to follow a course so that I can get updates sent to my email if any new documents are uploaded for a course that I’m following. 
+	- 4 days
+	- Priority: Medium
+
+As Kelly Hoskins, I would like the ability to add tags for course documents so that I can aggregate all relevant course information just by searching for a tag.
+	- 4 days
+	- Priority: Medium
+
+As Jim Rudebacher, I would like to be able to approve the documents that get uploaded by the students to my class so that they can organize documents based on importance.
+	- 2 days
+	- Priority: Low
+
+As Jim Rudebacher, I would like to be able to upload course docs so that I can get important and relevant course material to my students. 
+	- 4 days
+	- Priority: High
+
+As Kelly Hoskins, I would like to be able to upload past exams so that I can practice and collaborate with my classmates in that context.
+	- 4 days
+	- Priority: High
+
+As Kelly Hoskins, I would like to be able to search the general Internet in addition to the university courses and professors so that I can stay within the same context of school 	work while also researching.
+	- 4 days
+	- Priority: Low
+
+As Kelly Hoskins, I would like to be able to access basic site functionality from my phone or tablet while on the bus so that I can stay up to date with courses while commuting 	to and from work without having to carry my laptop
+	- Ongoing 
+	- Priority: Medium
+
+As Jim Rudebacher, I would like the ability to batch upload documents so that I can quickly upload everything from one folder or location without repetition. 
+	- 2 days
+	- Priority: Low
+
+As Kelly Hoskins, I would like to be able to search through documents, in addition to courses and instructors so that I can find a document based on keywords I remember from the 	content. 
+	- 10 days
+	- Priority: High
+
+As Jim Rudebacher, I would like the search to be able to highlight the most relevant results for quick visual parsing so that I can have the website contextualize relevant 	results for me based on my search. 
+	- 5 days
+	- Priority: Low
+
+As Kelly Hoskins, I would like to be able to use an advanced search feature that can filter through information on the website based on my search criteria. For example, I should be able to search through all documents containing either the word “Exam” OR “Outline”
+	- 10 days
+	- Priority: High
+

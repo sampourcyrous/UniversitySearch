@@ -1,0 +1,31 @@
+Product Backlog Item									Task										Volunteer	Status	Original Estimate	Day 1	Day 2	Day 3	Day 4	Day 5	Day 6	Day 7	Day 8	Day 9	Day 10	Day 11	Sprint Review
+
+"As Jim Rudebacher, I would like to be able to create	Set up complete stack skeleton				Zubair/Sam	Open					5
+ an account and sign in so that my home page can be 	Front end sign in page						Arafa		Open					4
+ customized with my own courses"						User table in DB							Jacob		Open					2
+														Email verification and Research				Jacob		Open					5
+														
+"As Jim Rudebacher, I would like to be able to upload	Drag and Drop or Dropbox API for front end	Arafa		Open					2
+ course docs so that I can get important and relevant	Doc Table in DB								Jacob		Open					1
+ course material to my students."						API End point for files						Zubair		Open					2
+	
+"As Kelly Hoskins, I would like to be able to upload 	Same tasks as course docs above
+past exams so that I can practice and collaborate 
+with my classmates in that context."	
+
+"As Kelly Hoskins, I would like to be able to access 	Using responsive framework for front 		Arafa		Open					1
+ basic site functionality from my phone or tablet		end development	
+ while on the bus so that I can stay up to date 		Dropbox API Mobile implementation			Sam			Open					2
+ with courses while commuting to and from work 			
+ without having to carry my laptop"
+	
+"As Kelly Hoskins, I would like the ability to 			Implement apache lucene search framework	Arafa/Jacob	Open					8
+ search across multiple dimensions so that I don’t 		Search within database across 				Arafa/Jacob	Open					2
+ have to think about the course/document structure		Command Line interface functionality		Arafa/Jacob	Open					4
+ different tables in my head to traverse the site."	
+	
+"As Kelly Hoskins, I would like to be able to Search 	Enhancing Search Implementation				Zubair/Sam	Open					6
+ through documents, in addition to courses and 			Implement type ahead with asynchronous 
+ instructors so that I can find a document based on 	requests and auto-complete					Zubair/Sam	Open					6
+ keywords I remember from the content."	
+	

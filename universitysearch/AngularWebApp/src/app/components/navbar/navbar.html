@@ -1,0 +1,41 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+<!--<nav class="navbar sidebar-nav navbar-inverse">-->
+  <!--<div class="col-sm-3 col-sm-pull-9 sidebarStyle">-->
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="https://www.utm.utoronto.ca/">
+        <img src="assets/images/uofttiny.png" />
+        <!--<span class="glyphicon glyphicon-home">University Search</span> -->
+      </a>
+      <a class="navbar-brand" href="https://www.utm.utoronto.ca/">
+      <span style="font-family: 'Droid Sans';"> UniversitySearch</span>
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6" uib-collapse="isCollapsed">
+
+        <ul ng-init="selectedTab = 'home'" class="nav navbar-nav" style="font-family: 'Droid Sans';">
+
+          <li ng-class="{'active':selectedTab === 'home'}" ng-click="selectedTab = 'home'"><a ng-href="#following">Home</a></li>
+          <li ng-class="{'active':selectedTab === 'about'}" ng-click="selectedTab = 'about'"><a ng-href="#about">About</a></li>
+          <li ng-class="{'active':selectedTab === 'contact'}" ng-click="selectedTab = 'contact'"><a ng-href="#contact">Contact</a></li>
+        </ul>
+
+      <div class="search_bar_container">
+        <search-bar></search-bar>
+      </div>
+
+    </div>
+
+  </div>
+</div>
