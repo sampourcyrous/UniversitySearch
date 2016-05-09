@@ -7,9 +7,10 @@ This was a project done for our Software Engineering (CSC301) class. The goal fo
 - Professors can add courses they teach
 - Students can follow any course
 - Students and professors can upload course material
-- Students and professors receive notifications when a document has been uploaded to a course they are following
+- Users receive notifications when a document has been uploaded to a course they are following
 - Apache Lucene is implemented for high performace indexing and document content searching
 - MVC based website. Front-end coded in Angular JS, backend servlet coded in Java
+- ORM used to communicate with MySQL database
 
 Here is a video demo of our project:
 
