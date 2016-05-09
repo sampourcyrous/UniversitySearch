@@ -19,6 +19,8 @@ Here is a video demo of our project:
 " target="_blank"><img src="http://img.youtube.com/vi/A9wque_JOuU/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
+Link to website: http://universitysearch-csc301project.rhcloud.com/#/
+
 This project could not have been done without the hard work and dedication of my group members:
 
 - Zubair Baig @zubairbaig
