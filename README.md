@@ -25,4 +25,4 @@ This project could not have been done without the hard work and dedication of my
 
 - Zubair Baig @zubairbaig
 - Jacob Steele @Jacob-Steele
-- Arafa Sulaiman
+- Arafa Sulaiman @arafas
